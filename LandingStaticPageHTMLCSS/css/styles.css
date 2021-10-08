@@ -1,0 +1,133 @@
+/* Padding for the first container */
+
+body{
+  background-color: #F1E9E5;
+}
+
+.container-fluid{
+  padding-top : 5%;
+  padding-left : 6%;
+  padding-right : 6%;
+}
+
+.btn{
+  width : 15%;
+}
+
+.main-heading{
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 5rem;
+  line-height : 2;
+  animation : moveInLeft 1s ease-in;
+}
+
+.icon-pack{
+  animation : moveInLeft 1s ease-in 3s;
+}
+.new-row i{
+  position : relative;
+
+}
+.new-row{
+  display : flex;
+  justify-content: center;
+  align-items : center;
+  padding : 10% 10%;
+}
+
+.icon-pack-rs:hover{
+  animation: spin;
+  animation-duration : 2s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+
+.sub-heading{
+  font-family: 'Caveat', cursive;
+  font-size : 3rem;
+  animation :   moveInLeft 1s ease-in 1s;
+  animation-fill-mode: backwards;
+}
+
+.fa-stripe-s{
+  transform : scale(0.8);
+
+}
+
+.glow{
+  animation: appear ease 3s , pop 2s linear 3s;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards;
+
+}
+
+/* Padding for the columns and row Bootstrap */
+.first-row{
+    padding : 7% 6%;
+}
+
+@keyframes moveInLeft{
+  0%{
+    transform : translateX(-40px);
+    opacity : 0;
+  }
+
+  100%{
+    transform : translate(0);
+    opacity : 1;
+  }
+}
+
+@keyframes spin{
+  100%{
+    transform : rotate(360deg);
+  }
+}
+
+@keyframes pop{
+  50%{
+    transform : scale(1.5);
+  }
+}
+
+
+
+ @keyframes appear{
+   0%{
+     opacity : 0;
+   }
+
+   100%{
+     opacity : 1;
+   }
+ }
+
+ @keyframes popNew{
+   50%{
+     transform : scale(0.8);
+   }
+ }
+
+/* Media queries for responsive web design */
+@media screen and (min-width : 300px) and (max-width : 768px) {
+  .main-heading{
+    font-size : 3rem;
+    text-align : center;
+    justify-content: center;
+
+  }
+
+  .sub-heading{
+    font-size : 2rem;
+    text-align : center;
+    justify-content: center;
+  }
+
+  .glow{
+    animation: appear ease 3s , popNew 2s linear 3s;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards;
+  }
+}
